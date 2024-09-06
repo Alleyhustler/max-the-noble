@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka One', sans-serif;
+    background: url('images/color-pastel-rainbow-lines-xb4joddynqs5zt6u.gif') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200vh; /* Ensure that the page height is large enough to force scrolling */
+    overflow-y: scroll; /* Ensure the page can be scrolled */
+}
+
+header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    z-index: 100;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for a floating effect */
+    animation: fadeInDown 0.8s ease; /* Fade-in animation */
+}
+
+/* Nav container and logo-home combo */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.nav-logo-home {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+.home-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 10px; /* Space between logo and Home text */
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .home-link:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+.nav-logo-home:hover .nav-logo {
+    transform: rotate(10deg) scale(1.1); /* Tilt and zoom on hover */
+}
+
+.main-content {
+    margin-top: 60px; /* Reduced space below the fixed navbar */
+    text-align: center;
+}
+
+.center-image-container {
+    margin-bottom: 20px; /* Reduced space between the image and the button */
+    animation: fadeIn 1.5s ease forwards; /* Fade-in effect */
+}
+
+.center-image {
+    width: 550px; /* Slightly reduced width to make more room */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Center the image */
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards; /* Fade-in effect */
+}
+
+/* Social Icons Container */
+.social-icons {
+    position: absolute;
+    left: 550px; /* Adjusted based on the reduced layout */
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+/* Individual Social Icon */
+.social-icon {
+    display: inline-block;
+    width: 90px; /* Reduced size */
+    height: 90px;
+    margin: 8px;
+    transform: rotate(-15deg); /* Tilt effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.social-icon img {
+    width: 90px; /* Reduced size */
+    height: auto;
+}
+
+/* Hover Effects */
+.social-icon:hover {
+    transform: rotate(15deg) scale(1.1); /* Tilt on hover */
+    box-shadow: 0px 0px 100px rgb(255, 0, 0); /* Enhance shadow on hover */
+}
+
+/* New Section Styling (Adjusted) */
+.new-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0; /* Reduced padding */
+    min-height: 90vh; /* Reduced height to make more room */
+}
+
+.rectangle-container {
+    position: relative;
+    width: 650px; /* Slightly reduced width */
+    height: 380px; /* Slightly reduced height */
+    background-color: rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255); /* Add border thickness and color */
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px; /* Reduced padding */
+    animation: slideUp 1.2s ease forwards; /* Slide up animation */
+}
+
+.circle-image {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.circle-image img {
+    width: 140px; /* Slightly reduced size */
+    height: 140px; /* Slightly reduced size */
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+.rectangle-content {
+    text-align: center; /* Ensures the text is centered horizontally */
+}
+
+h1 {
+    font-size: 2.2rem; /* Slightly reduced font size */
+    margin-bottom: 8px;
+    color: rgb(255, 255, 255);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.subtitle {
+    font-size: 1.1rem; /* Slightly reduced font size */
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}
+
+.sub-subtitle {
+    font-size: 0.9rem; /* Slightly reduced font size */
+    font-weight: lighter;
+    color: rgb(255, 255, 255);
+}
+
+.tokenomics {
+    margin: 40px 0; /* Reduced margin to move the section up */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideIn 1.5s ease forwards; /* Slide-in animation */
+}
+
+.tokenomics img {
+    max-width: 550px; /* Slightly reduced size */
+    max-height: 450px; /* Slightly reduced size */
+    object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
